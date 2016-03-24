@@ -11,9 +11,9 @@ public class Solution {
                                                                  // if  s[i-longest[i-1]-1] =='(' longest[i] = longest[i-1] +2 + longest[i-longest[i-1] -2]
                                                                  // else  =0;? 
     int max =0;
-    for(int i=0; i<s.length(); i++){
+    for(int i=1; i<s.length(); i++){
         
-        if(i>=0 && s.charAt(i) == ')'){
+        if(i>=1 && s.charAt(i) == ')'){
             if(s.charAt(i-1) == '('){
                 longest[i] = (i-2 >=0) ?longest[i-2]+2 : 2;
             }else if(i-longest[i-1]-1 >= 0 && s.charAt(i-longest[i-1]-1) =='('){
