@@ -17,7 +17,7 @@ public class Solution {
             if(s.charAt(i-1) == '('){
                 longest[i] = (i-2 >=0) ?longest[i-2]+2 : 2;
             }else if(i-longest[i-1]-1 >= 0 && s.charAt(i-longest[i-1]-1) =='('){
-                longest[i] = longest[i-1]+2 + (i-longest[i-1]-2 >0 ?longest[i-longest[i-1]-2] :0;
+                longest[i] = longest[i-1]+2 + (i-longest[i-1]-2 >0 ?longest[i-longest[i-1]-2] :0);
             }   
             max = Math.max(max,longest[i]);
         }
